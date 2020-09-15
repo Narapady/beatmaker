@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+h1 {
+  color: rgb(88, 88, 88);
+  letter-spacing: 5px;
+}
+
+.sequencer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.kick-pad {
+  background: rgb(94, 94, 243);
+}
+
+.snare-pad {
+  background: rgb(231, 96, 225);
+}
+
+.hihat-pad {
+  background: rgb(221, 144, 80);
+}
+
+.kick-pad.active {
+  background: rgb(43, 43, 228);
+}
+
+.snare-pad.active {
+  background: rgb(230, 39, 220);
+}
+
+.hihat-pad.active {
+  background: rgb(218, 113, 28);
+}
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+  margin-left: 1rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.controls button {
+  padding: 1rem;
+  border: none;
+  background: rgb(88, 88, 88);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border-radius: 100%;
+  outline: none;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+.play {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: rgb(88, 88, 88);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+  border-radius: 10px;
+  outline: none;
+}
+
+.tempo {
+    margin: 3rem;
+    width: 30%;
+}
+
+.tempo-slider {
+    padding: 0.2rem;
+    -webkit-appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    background: rgb(88, 88, 88);
+    cursor: pointer;
+    border-radius: 1rem;
+    outline: none;
+}
+
+.tempo p {
+    text-align: center;
+    font-size: 1rem;
+    margin: 2rem;
+}
+
+select {
+  padding: 0.3rem;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.mute.active {
+  background: rgb(182, 182, 182);
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
